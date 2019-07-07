@@ -1,16 +1,32 @@
 {
-  "name": "vueGraphql",
+  "name": "vue-graphql",
   "version": "1.0.0",
   "description": "Fullstack web app with vue and graphql",
-  "main": "index.js",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/fuchis/vue-graphql.git"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "server": "nodemon server.js",
+    "client": "cd client && npm start",
+    "dev": "concurrently --names \"server,cliente\"\"npm run server --silent\" \"npm run client --silent\""
   },
   "keywords": [],
-  "author": "",
+  "author": "fuchis",
   "license": "ISC",
   "devDependencies": {
     "concurrently": "^4.1.1",
     "nodemon": "^1.19.1"
+  },
+  "dependencies": {
+    "apollo-server": "^2.6.7",
+    "bcrypt": "^3.0.6",
+    "dotenv": "^8.0.0",
+    "graphql": "^14.4.2",
+    "jsonwebtoken": "^8.5.1",
+    "md5": "^2.2.1",
+    "mongoose": "^5.6.3"
   }
 }
